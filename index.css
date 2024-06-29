@@ -1,0 +1,192 @@
+.to-do{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #fbfbfb;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 20ch; /* Adjust width to the length of the text */
+  animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 20ch;
+  }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  from, to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
+}
+
+button{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 10px;
+    border: 1px solid rgb(128, 125, 125);
+    box-shadow: 5px 5px 5px hsla(0, 7%, 40%, 0.611);
+    cursor: pointer;
+}
+
+.add-btn{
+    margin-left: 10px;
+    background-color: hsl(190, 72%, 44%);
+}
+.add-btn:hover{
+    background-color: hsl(190, 72%, 34%);
+}
+
+.delete-btn{
+  background-color: hsl(0, 81%, 55%);
+}
+.delete-btn:hover{
+  background-color: hsl(0, 81%, 40%);
+}
+
+.complete-btn{
+  background-color: hsl(94, 52%, 44%);
+}
+.complete-btn:hover{
+  background-color: hsl(94, 52%, 34%);
+}
+
+.move-btn{
+  background-color: hsla(187, 69%, 49%, 0.884);
+}
+.move-btn:hover{
+  background-color: hsla(187, 69%, 39%, 0.884);
+}
+
+input[type='text']{
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    border: 2px solid rgb(128, 125, 125);
+    box-shadow: 5px 5px 5px hsla(0, 7%, 40%, 0.611);
+}
+
+ol{
+  list-style: none;
+  width: 50%; 
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    background-color: hsl(180, 44%, 86%); 
+    color:rgb(6, 6, 6);
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px hsla(180, 62%, 31%, 0.677);
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+li:hover{
+    transform: scale(1.04);
+}
+
+.text{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.delete-btn, .move-btn, .complete-btn{
+    padding: 8px 12px;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+body{
+  background-color: rgb(13, 83, 83) ;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.dots-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.side-nav {
+  position: fixed;
+  top: 20px;
+  right: -300px;
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+}
+
+.side-nav.open {
+  right: 20px; 
+}
+
+.side-nav h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.side-nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.side-nav ul li {
+  padding: 8px 0;
+  color: #666;
+}
