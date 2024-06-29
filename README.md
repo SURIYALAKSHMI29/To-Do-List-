@@ -1,2 +1,2 @@
 # To-Do-List-
-A simple To-Do-List using raect
+A simple To-Do-List using React Library
